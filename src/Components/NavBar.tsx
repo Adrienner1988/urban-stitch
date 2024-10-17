@@ -10,13 +10,11 @@ const NavBar = () => {
     <>
       <nav>
         {/* fixed to the top. name or logo link- search, account, wishlist, cart icons, hamburger menu to slide out same menu*/}
-        <div className="first bar">
-          <ul className="">
+        <div className="first-bar w-full p-2 fixed top-0 z-10 border-4 border-double border-red-500 ">
+          <ul className="flex items-center justify-between flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <li className="home">
               {" "}
-              <NavLink to={"/"}>
-                UrbanStitch
-              </NavLink>
+              <NavLink to={"/"}>UrbanStitch</NavLink>
             </li>
 
             <li className="search-icon">
@@ -50,31 +48,25 @@ const NavBar = () => {
             <li className="hamburger-icon">
               {" "}
               <NavLink to={"/sidebar"}>
-               <MenuOutlinedIcon />
+                <MenuOutlinedIcon />
               </NavLink>
             </li>
           </ul>
         </div>
 
         {/* page links across page, disappears on scroll down  */}
-        <div className="second bar">
-          <ul>
+        <div className="second-bar w-full p-2 fixed top-16 z-0 border-4 border-double border-green-600">
+          <ul className="flex items-center justify-between flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 ">
             <li className="nav-list">
-              <NavLink to={"/women"}>
-                women
-              </NavLink>
+              <NavLink to={"/women"}>women</NavLink>
             </li>
 
             <li className="nav-list">
-              <NavLink to={"/men"}>
-                men
-              </NavLink>
+              <NavLink to={"/men"}>men</NavLink>
             </li>
 
             <li className="nav-list">
-              <NavLink to={"/accessories"}>
-                accessories
-              </NavLink>
+              <NavLink to={"/accessories"}>accessories</NavLink>
             </li>
           </ul>
         </div>

@@ -9,6 +9,7 @@ import SidebarNav from "./Components/SidebarNav";
 import Women from "./Views/Women";
 import Men from "./Views/Men";
 import Accessories from "./Views/Accessories";
+import "./index.css"
 
 function App() {
   return (
