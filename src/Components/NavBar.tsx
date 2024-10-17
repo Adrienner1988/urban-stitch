@@ -33,37 +33,39 @@ const NavBar = () => {
         {/* fixed to the top: logo on left, icons on right */}
         <div className="first-bar w-full h-14 p-4 fixed top-0 z-10 flex items-center justify-between">
           <div className="logo font-bold">
-            <NavLink to={"/"}>UrbanStitch</NavLink>
+            <NavLink to={"/"} aria-label="UrbanStitch Home">
+              UrbanStitch
+            </NavLink>
           </div>
 
           {/* Icons float to the right */}
           <ul className="flex space-x-4 items-center">
             <li className="search-icon">
-              <NavLink to={"/search"}>
+              <NavLink to={"/search"} aria-label="Search">
                 <SearchIcon />
               </NavLink>
             </li>
 
             <li className="account-icon">
-              <NavLink to={"/account"}>
+              <NavLink to={"/account"} aria-label="Account">
                 <PersonOutlineIcon />
               </NavLink>
             </li>
 
             <li className="wishlist-icon">
-              <NavLink to={"/wishlist"}>
+              <NavLink to={"/wishlist"} aria-label="Wishlist">
                 <FavoriteBorderIcon />
               </NavLink>
             </li>
 
             <li className="cart-icon">
-              <NavLink to={"/cart"}>
+              <NavLink to={"/cart"} aria-label="Cart">
                 <ShoppingBagOutlinedIcon />
               </NavLink>
             </li>
 
             <li className="hamburger-icon">
-              <NavLink to={"/sidebar"}>
+              <NavLink to={"/sidebar"} aria-label="Sidebar Menu">
                 <MenuOutlinedIcon />
               </NavLink>
             </li>
@@ -78,15 +80,21 @@ const NavBar = () => {
         >
           <ul className="flex items-center justify-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <li className="font-bold">
-              <NavLink to={"/women"}>Women</NavLink>
+              <NavLink to={"/women"} aria-label="Women">
+                Women
+              </NavLink>
             </li>
 
             <li className="font-bold">
-              <NavLink to={"/men"}>Men</NavLink>
+              <NavLink to={"/men"} aria-label="Men">
+                Men
+              </NavLink>
             </li>
 
             <li className="font-bold">
-              <NavLink to={"/accessories"}>Accessories</NavLink>
+              <NavLink to={"/accessories"} aria-label="Accessories">
+                Accessories
+              </NavLink>
             </li>
           </ul>
         </div>
