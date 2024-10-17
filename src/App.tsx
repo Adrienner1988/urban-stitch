@@ -5,7 +5,6 @@ import Search  from "./Components/Search";
 import Account from "./Views/Account";
 import Wishlist from "./Views/Wishlist";
 import Cart from "./Views/Cart";
-import SidebarNav from "./Components/SidebarNav";
 import Women from "./Views/Women";
 import Men from "./Views/Men";
 import Accessories from "./Views/Accessories";
@@ -21,7 +20,6 @@ function App() {
         <Route path="/account" element={<Account />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/sidebar" element={<SidebarNav />} />
         <Route path="/women" element={<Women />} />
         <Route path="/men" element={<Men />} />
         <Route path="/accessories" element={<Accessories />} />
