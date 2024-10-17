@@ -8,6 +8,13 @@ export default {
       lg: "976px",
       xl: "1440px",
     },
+    colors: {
+      lightCream: "#f9f9f7",
+      gray: "#8492a6",
+      paleGray: "#f9f9f7",
+      grayLight: "#d3dce6",
+      grayDark: "#273444",
+    },
     extend: {
       boxShadow: {
         "custom-light": "0px 4px 8px rgba(0, 0, 0, 0.1)",
