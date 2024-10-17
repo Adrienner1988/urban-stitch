@@ -4,8 +4,30 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import { useState, useEffect } from "react";
 
 const NavBar = () => {
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    let scrollTop = 0;
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+    
+    if (currentScroll > scrollTop) {
+      setIsHidden(true);
+    } else {
+      setIsHidden(false);
+    }
+  scrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [])
+
+
   return (
     <>
       <nav>
@@ -55,7 +77,11 @@ const NavBar = () => {
         </div>
 
         {/* page links across page, disappears on scroll down  */}
-        <div className="second-bar w-full p-2 fixed top-16 z-0 border-4 border-double border-green-600">
+        <div
+          className={`second-bar w-full p-2 fixed top-16 left-0 border-4 border-double border-blue-500 z-0 transition-transform duration-300 ${
+            isHidden ? "transform translate-y-full" : "transform translate-y-0"
+          }`}
+        >
           <ul className="flex items-center justify-between flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 ">
             <li className="nav-list">
               <NavLink to={"/women"}>women</NavLink>
