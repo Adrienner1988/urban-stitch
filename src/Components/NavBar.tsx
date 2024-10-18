@@ -35,6 +35,7 @@ const NavBar = () => {
           <div className="logo font-bold">
             <NavLink to={"/"} aria-label="UrbanStitch Home">
               UrbanStitch
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-500 group-hover:w-full"></span>
             </NavLink>
           </div>
 
@@ -79,21 +80,24 @@ const NavBar = () => {
           }`}
         >
           <ul className="flex items-center justify-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-            <li className="font-bold">
+            <li className="font-bold nav-list relative group">
               <NavLink to={"/women"} aria-label="Women">
                 Women
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-grayDark transition-all duration-500 group-hover:w-full"></span>
               </NavLink>
             </li>
 
-            <li className="font-bold">
+            <li className="font-bold nav-list relative group">
               <NavLink to={"/men"} aria-label="Men">
                 Men
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-grayDark transition-all duration-500 group-hover:w-full"></span>
               </NavLink>
             </li>
 
-            <li className="font-bold">
+            <li className="font-bold nav-list relative group">
               <NavLink to={"/accessories"} aria-label="Accessories">
                 Accessories
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-grayDark transition-all duration-500 group-hover:w-full"></span>
               </NavLink>
             </li>
           </ul>
