@@ -42,10 +42,10 @@ const NavBar = () => {
       <nav>
         {/* fixed to the top: logo on left, icons on right */}
         <div className="first-bar w-full h-14 p-4 fixed top-0 z-10 flex items-center justify-between bg-lightCream">
-          <div className="logo font-bold">
+          <div className="logo font-bold relative group">
             <NavLink to={"/"} aria-label="UrbanStitch Home">
               UrbanStitch
-              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-500 group-hover:w-full"></span>
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-grayDark transition-all duration-500 group-hover:w-full inline-block"></span>
             </NavLink>
           </div>
 
@@ -127,21 +127,28 @@ const NavBar = () => {
           <CloseIcon />
         </button>
         <ul className="flex flex-col space-y-4 mt-16 p-4">
-          <li className="font-bold">
+          <li className="font-bold nav-list relative group">
             <NavLink to={"/women"} onClick={toggleSidebar} aria-label="Women">
               Women
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-grayDark transition-all duration-500 group-hover:w-[26%]"></span>
             </NavLink>
           </li>
 
-          <li className="font-bold">
+          <li className="font-bold nav-list relative group">
             <NavLink to={"/men"} onClick={toggleSidebar} aria-label="Men">
               Men
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-grayDark transition-all duration-500 group-hover:w-[15%]"></span>
             </NavLink>
           </li>
 
-          <li className="font-bold">
-            <NavLink to={"/accessories"} onClick={toggleSidebar} aria-label="Accessories">
+          <li className="font-bold nav-list relative group">
+            <NavLink
+              to={"/accessories"}
+              onClick={toggleSidebar}
+              aria-label="Accessories"
+            >
               Accessories
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-grayDark transition-all duration-500 group-hover:w-[39%]"></span>
             </NavLink>
           </li>
         </ul>
